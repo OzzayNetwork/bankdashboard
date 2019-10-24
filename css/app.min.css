@@ -2240,10 +2240,23 @@ a.btn.disabled, fieldset:disabled a.btn {
 .btn-warning.focus, .btn-warning:focus, .btn-warning:not(:disabled):not(.disabled).active:focus, .btn-warning:not(:disabled):not(.disabled):active:focus, .show>.btn-warning.dropdown-toggle:focus {
     box-shadow: 0 0 0 0 rgba(255,207,66,.5)
 }
+.btn-green.focus, .btn-green:focus, .btn-green:not(:disabled):not(.disabled).active:focus, .btn-green:not(:disabled):not(.disabled):active:focus, .show>.btn-green.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0 rgba(6,97,48,.5)
+}
 .btn-warning {
     color: #FFF;
     background-color: #ffc721;
     border-color: #ffc721
+}
+.btn-green {
+    color: #FFF;
+    background-color: #57af6b;
+    border-color: #57af6b;
+}
+.btn-green:hover {
+    color: #FFF;
+    background-color: #60cc78;
+    border-color: #60cc78;
 }
 .btn-warning:hover {
     color: #FFF;
