@@ -13757,5 +13757,39 @@ thead tr, tfoot tr{
 .rotate180{
     transform: rotate(180deg);
 }
+.notification-container, .drop-file-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000085;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+.close-droper {
+    margin-bottom: 300px;
+    top: -10%;
+    right: -20px;
+}
+*, :active, :focus, :hover {
+    outline: 0!important;
+    -webkit-tap-highlight-color: transparent!important;
+}
+.drop-section-container {
+    border: 2px solid;
+    border-radius: 4px;
+    border-style: dashed;
+    border-color: #03a9f499;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.drop-section-container img {
+    opacity: 0.2;
+    width: 50%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
 
 

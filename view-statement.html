@@ -81,65 +81,50 @@
             </aside>
 
             <section class="content">
-                
+                    <header class="content__title px-0">
+                            <h1 class="text-capitalize">
+                                <a class="text-primary" href="admin.html">Administrator </a><i class="zmdi zmdi-chevron-right mx-3"></i>
+                               <span> Selected Statement name</span>
+                            </h1>
+                            
+                        </header>
                 <div class="row">
                     <div class="col-12">
                         <!-- the table starts here -->
                      <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title text-capitalize">other payment types</h4>
-                                <h6 class="card-subtitle">the table shows a number of different transactions.</h6>
-                                <hr>
-                                <div class="upload-form-buttons-container my-5">
-                                <h6 class="card-subtitle mb-2 text-dark ">Use the buttons bellow to correctly upload an Mpesa or Bank statement</h4>
-                                <button class="btn btn-warning btn-blue btn--icon-text ml-0 pl-0" id="upload-bank">
-                                <em class="zmdi zmdi-balance zmdi-hc-fw"></em> Bank Statement
-                                </button>
-
-                                <button class="btn btn-green btn-blue btn--icon-text ml-2 pl-0" id="upload-mpesa">
-                                        <em class="zmdi zmdi-smartphone-android zmdi-hc-fw"></em> M-Pesa Statement
-                                        </button>
+                            <div class="card-body p-0">
+                                <div class="bg-green text-white p-4">
+                                        <h4 class="card-title text-capitalize text-white mx-1 mt-1">KES 5,691,739.00</h4>
+                                        <h6 class="card-subtitle text-white-50 mx-1 mb-1">256 Transactions</h6>
                                 </div>
-                               
-        
-                                <div class="table-responsive">
-                                    <table id="data-table" class="table table-bordered table-striped table-hover w-100">
+                                <div class="table-responsive p-4">
+                                    <table id="data-table" class="table table-bordered table-striped table-hover w-100 m-1">
                                         <thead class="  kev-capitalize thead-dark">
                                             <tr class="text-capitalize text-white">
-                                                    <th>statement</th>
-                                                    <th>records</th>
-                                                    <th>total debit</th>
-                                                    <th>total credit</th>
-                                                    <th>actions</th>
+                                                    <th>narration</th>
+                                                    <th>details</th>
+                                                    <th>amount debit</th>
+                                                    <th>amount credit</th>
+                                                    <th>transaction date</th>
                                             </tr>
                                         </thead>
                                         <tfoot class="text-capitalize">
                                             <tr class="text-capitalize">
-                                                    <th>dlete statement</th>
-                                                    <th>view statement</th>
-                                                    <th>total debit</th>
-                                                    <th>total credit</th>
-                                                    <th>actions</th> 
+                                                    <th>narration</th>
+                                                    <th>details</th>
+                                                    <th>amount debit</th>
+                                                    <th>amount credit</th>
+                                                    <th>transaction date</th>
                                             </tr>
                                         </tfoot>
                                         <tbody class="table-striped table-hover">
                                             <tr class="text-capitalize">
                                                 <td>Start to 21st August</td>
-                                                <td>11908</td>
+                                                <td>00</td>
                                                 <td>KES 598,420.00</td>
                                                 <td>KES 598,420.00</td>
                                                 <td>
-                                                    <!-- actions -->
-                                                    <div class="actions listview__actions">
-                                                            <div class="dropdown actions__item">
-                                                                <i class="zmdi zmdi-more-vert" data-toggle="dropdown"></i>
-                                                                <div class="dropdown-menu dropdown-menu-right text-capitalize">
-                                                                        <a class="dropdown-item" href="view-statement.html"><i class="zmdi zmdi-eye mr-2"></i>view statement</a>
-                                                                        <a class="dropdown-item" href="#"><i class="zmdi zmdi-delete mr-2"></i>Delete statement</a> 
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    <!-- actions -->
+                                                    23-Oct-2019
                                                 </td>
                                             </tr>
                                             <tr class="text-capitalize">
@@ -148,17 +133,7 @@
                                                     <td>KES 598,420.00</td>
                                                     <td>KES 598,420.00</td>
                                                     <td>
-                                                        <!-- actions -->
-                                                        <div class="actions listview__actions">
-                                                                <div class="dropdown actions__item">
-                                                                    <i class="zmdi zmdi-more-vert" data-toggle="dropdown"></i>
-                                                                    <div class="dropdown-menu dropdown-menu-right text-capitalize">
-                                                                            <a class="dropdown-item" href="#">Delete statement</a>
-                                                                            <a class="dropdown-item" href="#">view statement</a>
-                                                                        </div>
-                                                                </div>
-                                                            </div>
-                                                        <!-- actions -->
+                                                            23-Oct-2019
                                                     </td>
                                                 </tr>
 
@@ -168,17 +143,7 @@
                                                         <td>KES 598,420.00</td>
                                                         <td>KES 598,420.00</td>
                                                         <td>
-                                                            <!-- actions -->
-                                                            <div class="actions listview__actions">
-                                                                    <div class="dropdown actions__item">
-                                                                        <i class="zmdi zmdi-more-vert" data-toggle="dropdown"></i>
-                                                                        <div class="dropdown-menu dropdown-menu-right text-capitalize">
-                                                                                <a class="dropdown-item" href="view-statement.html"><i class="zmdi zmdi-eye mr-2"></i>view statement</a>
-                                                                                    <a class="dropdown-item" href="#"><i class="zmdi zmdi-delete mr-2"></i>Delete statement</a> 
-                                                                            </div>
-                                                                    </div>
-                                                                </div>
-                                                            <!-- actions -->
+                                                                23-Oct-2019
                                                         </td>
                                                     </tr>
 
@@ -188,17 +153,7 @@
                                                             <td>KES 598,420.00</td>
                                                             <td>KES 598,420.00</td>
                                                             <td>
-                                                                <!-- actions -->
-                                                                <div class="actions listview__actions">
-                                                                        <div class="dropdown actions__item">
-                                                                            <i class="zmdi zmdi-more-vert" data-toggle="dropdown"></i>
-                                                                            <div class="dropdown-menu dropdown-menu-right text-capitalize">
-                                                                                    <a class="dropdown-item" href="view-statement.html"><i class="zmdi zmdi-eye mr-2"></i>view statement</a>
-                                                                                    <a class="dropdown-item" href="#"><i class="zmdi zmdi-delete mr-2"></i>Delete statement</a>                                                                                    
-                                                                                </div>
-                                                                        </div>
-                                                                    </div>
-                                                                <!-- actions -->
+                                                                    23-Oct-2019
                                                             </td>
                                                         </tr>
 
@@ -208,17 +163,7 @@
                                                                 <td>KES 598,420.00</td>
                                                                 <td>KES 598,420.00</td>
                                                                 <td>
-                                                                    <!-- actions -->
-                                                                    <div class="actions listview__actions">
-                                                                            <div class="dropdown actions__item">
-                                                                                <i class="zmdi zmdi-more-vert" data-toggle="dropdown"></i>
-                                                                                <div class="dropdown-menu dropdown-menu-right text-capitalize">
-                                                                                        <a class="dropdown-item" href="view-statement.html"><i class="zmdi zmdi-eye mr-2"></i>view statement</a>
-                                                                                        <a class="dropdown-item" href="#"><i class="zmdi zmdi-delete mr-2"></i>Delete statement</a> 
-                                                                                    </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    <!-- actions -->
+                                                                        23-Oct-2019
                                                                 </td>
                                                             </tr>
 
@@ -228,17 +173,7 @@
                                                                     <td>KES 598,420.00</td>
                                                                     <td>KES 598,420.00</td>
                                                                     <td>
-                                                                        <!-- actions -->
-                                                                        <div class="actions listview__actions">
-                                                                                <div class="dropdown actions__item">
-                                                                                    <i class="zmdi zmdi-more-vert" data-toggle="dropdown"></i>
-                                                                                    <div class="dropdown-menu dropdown-menu-right text-capitalize">
-                                                                                            <a class="dropdown-item" href="view-statement.html"><i class="zmdi zmdi-eye mr-2"></i>view statement</a>
-                                                                                            <a class="dropdown-item" href="#"><i class="zmdi zmdi-delete mr-2"></i>Delete statement</a> 
-                                                                                        </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        <!-- actions -->
+                                                                            23-Oct-2019
                                                                     </td>
                                                                 </tr>
                                         </tbody>
