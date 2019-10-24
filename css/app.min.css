@@ -8248,7 +8248,7 @@ h2, h3 {
     color: rgba(255,255,255,.75)
 }
 .card-title {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 400;
     line-height: 140%;
     margin-top: -.35rem
@@ -8281,6 +8281,9 @@ h2, h3 {
     display: inline-block;
     margin-top: 1rem;
     transition: color .3s
+}
+#data-table thead th{
+    padding-right: 35px;;
 }
 
 @media screen and (prefers-reduced-motion:reduce) {
@@ -10392,10 +10395,19 @@ opacity:1
 .listview:not(.listview--block) .listview__item {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex
+    display: flex;
+    border-bottom: 1px solid #8062542b;
+}
+
+.listview:not(.listview--block) .listview__item small{
+    color: #495057!important;
+}
+
+.listview:not(.listview--block) .listview__item h3{
+    color: black!important;
 }
 .listview__img {
-    height: 3rem;
+    height: 60px;
     border-radius: 50%;
     vertical-align: top;
     margin: 0 1.2rem 0 0
@@ -11822,7 +11834,9 @@ color:#868e96
 .widget-past-days__info h3 {
     margin: 0;
     color: #FFF;
-    font-weight: 400
+    font-weight: 400;
+    font-size: 18px;;
+
 }
 .widget-visitors__stats {
     margin: 0 -.5rem 2rem
@@ -11918,9 +11932,9 @@ color:#868e96
     white-space: nowrap
 }
 .quick-stats__info>h2 {
-    font-weight: 300;
+    font-weight: 600;
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #FFF;
 }
 .quick-stats__info>small {
@@ -13682,7 +13696,6 @@ ul.jqtree-tree ul.jqtree_common {
 .dataTables_wrapper .table>thead>tr>th, tfoot tr th {
     cursor:default;
     font-weight: bold;
-    
 	color: black;
 }
 
@@ -13701,6 +13714,35 @@ thead tr, tfoot tr{
     background-color:#459f62;
     color: #FFF;
     cursor: default;
+}
+.thead-dark th{
+    color: white !important;
+}
+.thead-dark th:hover{
+    color:black !important;
+}
+
+.quick-nav-container{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 8;
+}
+.btn-floating {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 22px;
+    position: relative;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+    border:none;
+    transition-duration: 800ms !important;
+}
+.rotate180{
+    transform: rotate(180deg);
 }
 
 

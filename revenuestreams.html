@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+      
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
+    </head>
+
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                </div>
+            </div>
+
+            <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                    </div>
+                </div>
+
+                <div class="header__logo hidden-sm-down">
+                    <h1><a href="index.html">Revenuesure Reconmate</a></h1>
+                </div>
+
+                
+            </header>
+
+            <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                            <img class="user__img" src="img/county.png" alt="">
+                            <div>
+                                <div class="user__name">Fname Lname</div>
+                                <div class="user__email">email@email.com</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">View Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+
+                    <ul class="navigation text-capitalize">
+                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a></li>
+
+                        <li><a href="revenuestreams.html"><i class="zmdi zmdi-money"></i> Revenue streams</a></li>
+
+                        <li><a href="reconmate.html"><i class="zmdi zmdi-swap"></i> reconmate</a></li>    
+                        
+                        <li><a href="mpesa.html"><i class="zmdi zmdi-smartphone-android"></i> Mpesa</a></li>   
+                        
+                        <li><a href="others.html"><i class="zmdi zmdi-apps"></i>others</a></li>   
+                        
+                        <li><a href="analysis.html"><i class="zmdi zmdi-trending-up"></i> analysis</a></li>  
+
+                        <li><a href="admin.html"><i class="zmdi zmdi-star-outline"></i>admin</a></li>  
+                        
+                        <li class="mt-5"><a href="reconmate.html"><i class="zmdi zmdi-power"></i> logout</a></li>    
+                        
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="content">
+                <header class="content__title">
+                    <h1>Dashboard</h1>
+                    <small>Welcome to the revenuesure roconmet dashboard</small>
+                   
+                </header>
+               
+                <div class="row">
+                    <!-- the table starts here -->
+                     <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Monthly revenue by revenue streams</h4>
+                        <h6 class="card-subtitle">The data below is a summery of revenue collected monthly for a given revenue stream</h6>
+
+                        <div class="table-responsive">
+                            <table id="data-table" class="table table-bordered table-striped table-hover">
+                                <thead class="  kev-capitalize ">
+                                    <tr class="text-capitalize text-white">
+                                        <th>Stream</th>
+                                        <th>Jan</th>
+                                        <th>feb</th>
+                                        <th>mar</th>
+                                        <th>apr</th>
+                                        <th>may</th>
+                                        <th>jun</th>
+                                        <th>jul</th>
+                                        <th>aug</th>
+                                        <th>sep</th>
+                                        <th>oct</th>
+                                        <th>nov</th>
+                                        <th>dec</th>
+                                        <th>totals</th>
+                                    </tr>
+                                </thead>
+                                <tfoot class="text-capitalize">
+                                    <tr class="text-capitalize">
+                                        <th>Stream</th>
+                                        <th>Jan</th>
+                                        <th>feb</th>
+                                        <th>mar</th>
+                                        <th>apr</th>
+                                        <th>may</th>
+                                        <th>jun</th>
+                                        <th>jul</th>
+                                        <th>aug</th>
+                                        <th>sep</th>
+                                        <th>oct</th>
+                                        <th>nov</th>
+                                        <th>dec</th>
+                                        <th>totals</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody class="table-striped table-hover">
+                                    <tr class="text-capitalize">
+                                        <th>parking</th>
+                                        <th>Jan</th>
+                                        <th>feb</th>
+                                        <th>mar</th>
+                                        <th>apr</th>
+                                        <th>may</th>
+                                        <th>jun</th>
+                                        <th>jul</th>
+                                        <th>aug</th>
+                                        <th>sep</th>
+                                        <th>oct</th>
+                                        <th>nov</th>
+                                        <th>dec</th>
+                                        <th>totals</th>
+                                    </tr>
+                                    <tr class="text-capitalize">
+                                        <th>parking</th>
+                                        <th>Jan</th>
+                                        <th>feb</th>
+                                        <th>mar</th>
+                                        <th>apr</th>
+                                        <th>may</th>
+                                        <th>jun</th>
+                                        <th>jul</th>
+                                        <th>aug</th>
+                                        <th>sep</th>
+                                        <th>oct</th>
+                                        <th>nov</th>
+                                        <th>dec</th>
+                                        <th>totals</th>
+                                    </tr>
+                                    <tr class="text-capitalize">
+                                        <th>parking</th>
+                                        <th>Jan</th>
+                                        <th>feb</th>
+                                        <th>mar</th>
+                                        <th>apr</th>
+                                        <th>may</th>
+                                        <th>jun</th>
+                                        <th>jul</th>
+                                        <th>aug</th>
+                                        <th>sep</th>
+                                        <th>oct</th>
+                                        <th>nov</th>
+                                        <th>dec</th>
+                                        <th>totals</th>
+                                    </tr>
+                                    <tr class="text-capitalize">
+                                        <th>parking</th>
+                                        <th>Jan</th>
+                                        <th>feb</th>
+                                        <th>mar</th>
+                                        <th>apr</th>
+                                        <th>may</th>
+                                        <th>jun</th>
+                                        <th>jul</th>
+                                        <th>aug</th>
+                                        <th>sep</th>
+                                        <th>oct</th>
+                                        <th>nov</th>
+                                        <th>dec</th>
+                                        <th>totals</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- the table ends here -->
+                </div>
+
+                
+
+                <footer class="footer hidden-xs-down">
+                    <p>© Revenuesure. All rights reserved.</p>
+
+                   
+                </footer>
+            </section>
+        </main>
+
+        <!-- Older IE warning message -->
+           
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+
+        <!-- Vendors: Data tables -->
+        <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+        <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+        <script src="vendors/jszip/jszip.min.js"></script>
+        <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+
+</html>
