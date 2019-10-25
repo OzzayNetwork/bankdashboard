@@ -53,8 +53,8 @@
                         </div>
 
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">View Profile</a>
-                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="profile.html">View Profile</a>
+                            <a class="dropdown-item" href="settings.html">Settings</a>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
                     </div>
@@ -87,8 +87,8 @@
                         <!-- the table starts here -->
                      <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title text-capitalize">other payment types</h4>
-                                <h6 class="card-subtitle">the table shows a number of different transactions.</h6>
+                                <h4 class="card-title text-capitalize">administrator</h4>
+                                <h6 class="card-subtitle">you can upload statements form this section and perform a number of administrative roles to various statements</h6>
                                 <hr>
                                 <div class="upload-form-buttons-container my-5">
                                 <h6 class="card-subtitle mb-2 text-dark ">Use the buttons bellow to correctly upload an Mpesa or Bank statement</h4>
@@ -274,6 +274,9 @@
                         <form class="drop-section-container cursor-pointer">
                             <input type="file"  name="file" id="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"  class="dropify " data-show-loader="true" />
                             <div class="form-group p-3 m-0">
+
+                                <h6 class="my-2">Fill in the form bellow to continue</h6>
+                                <hr>
                                 <label for="bank-title" class="text-capitalize">statement name</label>
                                 <input id="bank-title" type="text" name="bank_statement_name" class="form-control border px-3" placeholder="Statement title" aria-label="Username" aria-describedby="basic-addon1" required>
                                 <button class="btn btn-green text-capitalize mt-3 w-100 text-center"><i class="zmdi zmdi-upload mr-3"></i>upload statement</button>
@@ -302,6 +305,18 @@
                         <form class="drop-section-container cursor-pointer">
                             <input type="file"  name="file" id="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"  class="dropify " data-show-loader="true" />
                             <div class="form-group p-3 m-0">
+                                    <h6 class="my-2">Fill in the form bellow to continue</h6>
+                                    <hr>
+                                    <label for="inputGroupSelect04" class="text-capitalize">select a paybil</label>
+                                    <select class="custom-select form-control border text-capitalize" id="inputGroupSelect04">
+                                      <option selected>Choose...</option>
+                                      <option value="1">wakulima market</option>
+                                      <option value="2">muthurwa</option>
+                                      <option value="3">maasai</option>
+                                    </select>
+                                  </div>
+                            <div class="form-group p-3 m-0">
+                                    
                                 <label for="bank-title" class="text-capitalize">statement name</label>
                                 <input id="bank-title" type="text" name="bank_statement_name" class="form-control border px-3" placeholder="Statement title" aria-label="Username" aria-describedby="basic-addon1" required>
                                 <button class="btn btn-green text-capitalize mt-3 w-100 text-center"><i class="zmdi zmdi-upload mr-3"></i>upload statement</button>
