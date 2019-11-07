@@ -1,535 +1,767 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Vendor styles -->
-        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
-        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
-        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
-      
+<!-- Vendor styles -->
+<link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+<link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
 
-        <!-- App styles -->
-        <link rel="stylesheet" href="css/app.min.css">
-    </head>
+<!-- App styles -->
+<link rel="stylesheet" href="css/app.min.css">
+</head>
 
-    <body data-ma-theme="green">
-        <main class="main">
-            <div class="page-loader">
-                <div class="page-loader__spinner">
-                    <svg viewBox="25 25 50 50">
-                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-                    </svg>
-                </div>
+<body data-ma-theme="green">
+<main class="main">
+  <div class="page-loader">
+    <div class="page-loader__spinner">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+      </svg>
+    </div>
+  </div>
+  <header class="header">
+    <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+      <div class="navigation-trigger__inner"> <i class="navigation-trigger__line"></i> <i class="navigation-trigger__line"></i> <i class="navigation-trigger__line"></i> </div>
+    </div>
+    <div class="header__logo hidden-sm-down">
+      <h1><a href="index.html">Revenuesure Reconmate</a></h1>
+    </div>
+  </header>
+  <aside class="sidebar">
+    <div class="scrollbar-inner">
+      <div class="user">
+        <div class="user__info" data-toggle="dropdown"> <img class="user__img" src="img/county.png" alt="">
+          <div>
+            <div class="user__name">Fname Lname</div>
+            <div class="user__email">email@email.com</div>
+          </div>
+        </div>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="profile.html">View Profile</a> <a class="dropdown-item" href="#">Settings</a> <a class="dropdown-item" href="#">Logout</a> </div>
+      </div>
+      <ul class="navigation text-capitalize">
+        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a></li>
+        <li><a href="revenuestreams.html"><i class="zmdi zmdi-money"></i> Revenue streams</a></li>
+        <li><a href="reconmate.html"><i class="zmdi zmdi-swap"></i> reconmate</a></li>
+        <li><a href="mpesa.html"><i class="zmdi zmdi-smartphone-android"></i> Mpesa</a></li>
+        <li><a href="others.html"><i class="zmdi zmdi-apps"></i>others</a></li>
+        <li><a href="analysis.html"><i class="zmdi zmdi-trending-up"></i> analysis</a></li>
+        <li><a href="admin.html"><i class="zmdi zmdi-star-outline"></i>admin</a></li>
+        <li class="mt-5"><a href="reconmate.html"><i class="zmdi zmdi-power"></i> logout</a></li>
+      </ul>
+    </div>
+  </aside>
+  <section class="content">
+    <header class="content__title d-none">
+      <h1>Dashboard</h1>
+      <small>Welcome to the revenuesure roconmet dashboard</small> </header>
+    <div class="row"> 
+      <!-- the table starts here -->
+      <div class="col-12">
+        <div class="card results p-0 recon-container">
+          <div class="results__header">
+            <h4 class="card-title text-capitalize">Reconmate</h4>
+            <h6 class="card-subtitle">use this page for reconciliation of the various transactions</h6>
+            <nav class="nav nav-tabs results__nav"> <a class="nav-link active bank-trans-link" href="#">Bank Transactions</a> <a class="nav-link mpesa-trans-link" href="#">MPesa Transactions</a> <a class="nav-link crf-trans-link" href="#">CRF Transactions</a> <a class="nav-link debit-trans-link" href="#">Debits</a> </nav>
+          </div>
+          <div class="recon-table-container"> 
+            <!-- bank transactions -->
+            <div class="bank-transactions animated table-holder">
+              <div class="bg-warning text-white p-4 mb-4">
+                <h4 class="card-title text-capitalize text-black mx-1 mt-1">KES 19,367,535.00</h4>
+                <h6 class="card-subtitle text-black-50 mx-1 mb-1">256 Transactions Without Revenue Stream</h6>
+              </div>
+              <div class="px-4">
+                <table id="#" class="table table-bordered table-striped table-hover dataTable p-4 w-100 mt-4 recon-data-table">
+                  <thead class="  kev-capitalize ">
+                    <tr class="text-capitalize text-white">
+                      <th>Bank narration</th>
+                      <th>month</th>
+                      <th>transaction date</th>
+                      <th>amount in KES</th>
+                      <th>actions</th>
+                    </tr>
+                  </thead>
+                  <tfoot class="text-capitalize">
+                    <tr class="text-capitalize">
+                      <th>Bank narration</th>
+                      <th>month</th>
+                      <th>transaction date</th>
+                      <th>amount in KES</th>
+                      <th>actions</th>
+                    </tr>
+                  </tfoot>
+                  <tbody class="table-striped table-hover">
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773.0</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".bank-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-
-            <header class="header">
-                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
-                    <div class="navigation-trigger__inner">
-                        <i class="navigation-trigger__line"></i>
-                        <i class="navigation-trigger__line"></i>
-                        <i class="navigation-trigger__line"></i>
-                    </div>
-                </div>
-
-                <div class="header__logo hidden-sm-down">
-                    <h1><a href="index.html">Revenuesure Reconmate</a></h1>
-                </div>
-
-                
-            </header>
-
-            <aside class="sidebar">
-                <div class="scrollbar-inner">
-                    <div class="user">
-                        <div class="user__info" data-toggle="dropdown">
-                            <img class="user__img" src="img/county.png" alt="">
-                            <div>
-                                <div class="user__name">Fname Lname</div>
-                                <div class="user__email">email@email.com</div>
-                            </div>
-                        </div>
-
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">View Profile</a>
-                            <a class="dropdown-item" href="#">Settings</a>
-                            <a class="dropdown-item" href="#">Logout</a>
-                        </div>
-                    </div>
-
-                    <ul class="navigation text-capitalize">
-                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a></li>
-
-                        <li><a href="revenuestreams.html"><i class="zmdi zmdi-money"></i> Revenue streams</a></li>
-
-                        <li><a href="reconmate.html"><i class="zmdi zmdi-swap"></i> reconmate</a></li>    
-                        
-                        <li><a href="mpesa.html"><i class="zmdi zmdi-smartphone-android"></i> Mpesa</a></li>   
-                        
-                        <li><a href="others.html"><i class="zmdi zmdi-apps"></i>others</a></li>   
-                        
-                        <li><a href="analysis.html"><i class="zmdi zmdi-trending-up"></i> analysis</a></li>  
-
-                        <li><a href="admin.html"><i class="zmdi zmdi-star-outline"></i>admin</a></li>  
-                        
-                        <li class="mt-5"><a href="reconmate.html"><i class="zmdi zmdi-power"></i> logout</a></li>    
-                        
-                    </ul>
-                </div>
-            </aside>
-
-            <section class="content">
-                <header class="content__title d-none">
-                    <h1>Dashboard</h1>
-                    <small>Welcome to the revenuesure roconmet dashboard</small>
-                   
-                </header>
-               
-                <div class="row">
-                    <!-- the table starts here -->
-                    <div class="col-12">
-                            <div class="card results p-0 recon-container">
-                                    <div class="results__header">
-                                            <h4 class="card-title text-capitalize">Reconmate</h4>
-                                            <h6 class="card-subtitle">use this page for reconsiliation of the various transactions</h6>
+            <!-- bank transactions --> 
             
-                                       
+            <!-- mpesa transactions -->
+            <div class="mpesa-transactions table-holder animated d-none">
+              <div class="bg-green text-white p-4 mb-4">
+                <h4 class="card-title text-capitalize text-white mx-1 mt-1">KES 19,367,535.00</h4>
+                <h6 class="card-subtitle text-white-50 mx-1 mb-1">256 Transactions Without Revenue Stream</h6>
+              </div>
+              <div class="px-4">
+                <table id="#" class="table table-bordered table-striped table-hover dataTable p-4 w-100 mt-4 recon-data-table">
+                  <thead class="  kev-capitalize ">
+                    <tr class="text-capitalize text-white">
+                      <th>transaction details</th>
+                      <th>month</th>
+                      <th>transaction date</th>
+                      <th>Account No.</th>
+                      <th>Amount</th>
+                      <th>actions</th>
+                    </tr>
+                  </thead>
+                  <tfoot class="text-capitalize">
+                    <tr class="text-capitalize">
+                      <th>transaction details</th>
+                      <th>month</th>
+                      <th>transaction date</th>
+                      <th>Account No.</th>
+                      <th>Amount In KES</th>
+                      <th>actions</th>
+                    </tr>
+                  </tfoot>
+                  <tbody class="table-striped table-hover">
+                    <tr class="text-capitalize">
+                      <td><h6>NVG5568963</h6>
+                        <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p></td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773</td>
+                      <td>955,773</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".mpesa-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td><h6>NVG5568963</h6>
+                        <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p></td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773</td>
+                      <td>955,773</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".mpesa-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td><h6>NVG5568963</h6>
+                        <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p></td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773</td>
+                      <td>955,773</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".mpesa-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td><h6>NVG5568963</h6>
+                        <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p></td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773</td>
+                      <td>955,773</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".mpesa-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td><h6>NVG5568963</h6>
+                        <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p></td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>955773</td>
+                      <td>955,773</td>
+                      <td><button data-ma-action="aside-open" data-ma-target=".mpesa-side" class="btn btn-green">Assign</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- mpesa transactions --> 
             
-                                        <nav class="nav nav-tabs results__nav">
-                                            <a class="nav-link active bank-trans-link" href="#">Bank Transactions</a>
-                                            <a class="nav-link mpesa-trans-link" href="#">MPesa Transactions</a>
-                                            <a class="nav-link crf-trans-link" href="#">CRF Transactions</a>
-                                            <a class="nav-link debit-trans-link" href="#">Debits</a>
-                                        </nav>
-                                    </div>
+            <!-- crf transactions transactions -->
+            <div class="CRF-transactions table-holder animated d-none">
+              <div class=" bg-primary text-white p-4 mb-4">
+                <h4 class="card-title text-capitalize text-white mx-1 mt-1">KES 1,098,740,781.00</h4>
+                <h6 class="card-subtitle text-white-50 mx-1 mb-1">20 CRF(s)</h6>
+              </div>
+              <div class="px-4">
+                <table id="#" class="table table-bordered table-striped table-hover dataTable p-4 w-100 mt-4 recon-data-table">
+                  <thead class="  kev-capitalize ">
+                    <tr class="text-capitalize text-white">
+                      <th>Bank Narration</th>
+                      <th>month</th>
+                      <th>transaction date</th>
+                      <th>Amount</th>
+                      <th>Reversed  Amount</th>
+                      <th>actions</th>
+                    </tr>
+                  </thead>
+                  <tfoot class="text-capitalize">
+                    <tr class="text-capitalize">
+                      <th>Bank Narration</th>
+                      <th>month</th>
+                      <th>transaction date</th>
+                      <th>Amount</th>
+                      <th>Reversed  Amount</th>
+                      <th>actions</th>
+                    </tr>
+                  </tfoot>
+                  <tbody class="table-striped table-hover">
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                      <td>955,773</td>
+                      <td><button class="btn btn-green">Reversal</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- CRF transactions --> 
             
-                                  <div class="recon-table-container">
-                                      <!-- bank transactions -->
-                                  <div class="bank-transactions animated table-holder">
-                                        <div class="bg-warning text-white p-4 mb-4">
-                                                <h4 class="card-title text-capitalize text-black mx-1 mt-1">KES 19,367,535.00</h4>
-                                                <h6 class="card-subtitle text-black-50 mx-1 mb-1">256 Transactions Without Revenue Stream</h6>
-                                        </div>
-                                        <div class="px-4">
-                                                <table id="#" class="table table-bordered table-striped table-hover dataTable p-4 w-100 mt-4 recon-data-table">
-                                                        <thead class="  kev-capitalize ">
-                                                            <tr class="text-capitalize text-white">
-                                                                <th>Bank narration</th>
-                                                                <th>month</th>
-                                                                <th>transaction date</th>
-                                                                <th>amount in KES</th>
-                                                                <th>actions</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tfoot class="text-capitalize">
-                                                            <tr class="text-capitalize">
-                                                                    <th>Bank narration</th>
-                                                                    <th>month</th>
-                                                                    <th>transaction date</th>
-                                                                    <th>amount in KES</th>
-                                                                    <th>actions</th>
-                                                            </tr>
-                                                        </tfoot>
-                                                        <tbody class="table-striped table-hover">
-                                                            <tr class="text-capitalize">
-                                                                <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
-                                                                <td>January</td>
-                                                                <td>1/1/2019</td>
-                                                                <td>955773.0</td>
-                                                                <td>
-                                                                    <button class="btn btn-green">Assign</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="text-capitalize">
-                                                                    <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>955773.0</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Assign</button>
-                                                                    </td>
-                                                                </tr>
+            <!-- debits -->
+            <div class="debit-transactions table-holder animated d-none">
+              <div class=" bg-purple text-white p-4 mb-4">
+                <h4 class="card-title text-capitalize text-white mx-1 mt-1">KES 1,098,740,781.00</h4>
+                <h6 class="card-subtitle text-white-50 mx-1 mb-1">20 CRF(s)</h6>
+              </div>
+              <div class="px-4">
+                <table id="#" class="table table-bordered table-striped table-hover dataTable p-4 w-100 mt-4 recon-data-table">
+                  <thead class="  kev-capitalize ">
+                    <tr class="text-capitalize text-white">
+                      <th>Bank Narration</th>
+                      <th>month</th>
+                      <th>transaction date</th>
+                      <th>Amount in KES</th>
+                    </tr>
+                  </thead>
+                  <tfoot class="text-capitalize">
+                    <tr class="text-capitalize">
+                      <th>Bank Narration</th>
+                      <th>month</th>
+                      <th>transaction date</th>
+                      <th>Amount in KES</th>
+                    </tr>
+                  </tfoot>
+                  <tbody class="table-striped table-hover">
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                    </tr>
+                    <tr class="text-capitalize">
+                      <td>RTGS through Cheque SW09920081900372</td>
+                      <td>January</td>
+                      <td>1/1/2019</td>
+                      <td>91699354</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- debits --> 
+          </div>
+        </div>
         
-                                                                <tr class="text-capitalize">
-                                                                        <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
-                                                                        <td>January</td>
-                                                                        <td>1/1/2019</td>
-                                                                        <td>955773.0</td>
-                                                                        <td>
-                                                                            <button class="btn btn-green">Assign</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr class="text-capitalize">
-                                                                            <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
-                                                                            <td>January</td>
-                                                                            <td>1/1/2019</td>
-                                                                            <td>955773.0</td>
-                                                                            <td>
-                                                                                <button class="btn btn-green">Assign</button>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr class="text-capitalize">
-                                                                                <td>OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</td>
-                                                                                <td>January</td>
-                                                                                <td>1/1/2019</td>
-                                                                                <td>955773.0</td>
-                                                                                <td>
-                                                                                    <button class="btn btn-green">Assign</button>
-                                                                                </td>
-                                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                        </div>
-                                   </div>
-                                  <!-- bank transactions -->
-
-                                  <!-- mpesa transactions -->
-                                  <div class="mpesa-transactions table-holder animated d-none">
-                                        <div class="bg-green text-white p-4 mb-4">
-                                                <h4 class="card-title text-capitalize text-white mx-1 mt-1">KES 19,367,535.00</h4>
-                                                <h6 class="card-subtitle text-white-50 mx-1 mb-1">256 Transactions Without Revenue Stream</h6>
-                                        </div>
-                                        <div class="px-4">
-                                                <table id="#" class="table table-bordered table-striped table-hover dataTable p-4 w-100 mt-4 recon-data-table">
-                                                        <thead class="  kev-capitalize ">
-                                                            <tr class="text-capitalize text-white">
-                                                                <th>transaction details</th>
-                                                                <th>month</th>
-                                                                <th>transaction date</th>
-                                                                <th>Account No.</th>
-                                                                <th>Amount</th>
-                                                                <th>actions</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tfoot class="text-capitalize">
-                                                            <tr class="text-capitalize">
-                                                                    <th>transaction details</th>
-                                                                <th>month</th>
-                                                                <th>transaction date</th>
-                                                                <th>Account No.</th>
-                                                                <th>Amount In KES</th>
-                                                                <th>actions</th>
-                                                            </tr>
-                                                        </tfoot>
-                                                        <tbody class="table-striped table-hover">
-                                                            <tr class="text-capitalize">
-                                                                <td>
-                                                                    <h6>NVG5568963</h6>
-                                                                    <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p>
-                                                                </td>
-                                                                <td>January</td>
-                                                                <td>1/1/2019</td>
-                                                                <td>955773</td>
-                                                                <td>955,773</td>
-                                                                <td>
-                                                                    <button class="btn btn-green">Assign</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="text-capitalize">
-                                                                    <td>
-                                                                        <h6>NVG5568963</h6>
-                                                                        <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p>
-                                                                    </td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>955773</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Assign</button>
-                                                                    </td>
-                                                            </tr>
-                                                            <tr class="text-capitalize">
-                                                                    <td>
-                                                                        <h6>NVG5568963</h6>
-                                                                        <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p>
-                                                                    </td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>955773</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Assign</button>
-                                                                    </td>
-                                                            </tr>
-                                                            <tr class="text-capitalize">
-                                                                    <td>
-                                                                        <h6>NVG5568963</h6>
-                                                                        <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p>
-                                                                    </td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>955773</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Assign</button>
-                                                                    </td>
-                                                            </tr>
-                                                            <tr class="text-capitalize">
-                                                                    <td>
-                                                                        <h6>NVG5568963</h6>
-                                                                        <p>Pay Bill from 254721434922 - ALPHAXARD MAINA Acc. MS 190690024</p>
-                                                                    </td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>955773</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Assign</button>
-                                                                    </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                        </div>
-                                   </div>
-                                  <!-- mpesa transactions -->
-
-                                  <!-- crf transactions transactions -->
-                                  <div class="CRF-transactions table-holder animated d-none">
-                                        <div class=" bg-primary text-white p-4 mb-4">
-                                                <h4 class="card-title text-capitalize text-white mx-1 mt-1">KES 1,098,740,781.00</h4>
-                                                <h6 class="card-subtitle text-white-50 mx-1 mb-1">20 CRF(s)</h6>
-                                        </div>
-                                        <div class="px-4">
-                                                <table id="#" class="table table-bordered table-striped table-hover dataTable p-4 w-100 mt-4 recon-data-table">
-                                                        <thead class="  kev-capitalize ">
-                                                            <tr class="text-capitalize text-white">
-                                                                <th>Bank Narration</th>
-                                                                <th>month</th>
-                                                                <th>transaction date</th>
-                                                                <th>Amount</th>
-                                                                <th>Reversed  Amount</th>
-                                                                <th>actions</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tfoot class="text-capitalize">
-                                                            <tr class="text-capitalize">
-                                                                    <th>Bank Narration</th>
-                                                                    <th>month</th>
-                                                                    <th>transaction date</th>
-                                                                    <th>Amount</th>
-                                                                    <th>Reversed  Amount</th>
-                                                                    <th>actions</th>
-                                                            </tr>
-                                                        </tfoot>
-                                                        <tbody class="table-striped table-hover">
-                                                            <tr class="text-capitalize">
-                                                                <td>RTGS through Cheque SW09920081900372</td>
-                                                                <td>January</td>
-                                                                <td>1/1/2019</td>
-                                                                <td>91699354</td>
-                                                                <td>955,773</td>
-                                                                <td>
-                                                                    <button class="btn btn-green">Reversal</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="text-capitalize">
-                                                                    <td>RTGS through Cheque SW09920081900372</td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>91699354</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Reversal</button>
-                                                                    </td>
-                                                            </tr>
-
-                                                            <tr class="text-capitalize">
-                                                                    <td>RTGS through Cheque SW09920081900372</td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>91699354</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Reversal</button>
-                                                                    </td>
-                                                            </tr>
-
-                                                            <tr class="text-capitalize">
-                                                                    <td>RTGS through Cheque SW09920081900372</td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>91699354</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Reversal</button>
-                                                                    </td>
-                                                            </tr>
-
-                                                            <tr class="text-capitalize">
-                                                                    <td>RTGS through Cheque SW09920081900372</td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>91699354</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Reversal</button>
-                                                                    </td>
-                                                            </tr>
-
-                                                            <tr class="text-capitalize">
-                                                                    <td>RTGS through Cheque SW09920081900372</td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>91699354</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Reversal</button>
-                                                                    </td>
-                                                            </tr>
-
-                                                            <tr class="text-capitalize">
-                                                                    <td>RTGS through Cheque SW09920081900372</td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>91699354</td>
-                                                                    <td>955,773</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Reversal</button>
-                                                                    </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                        </div>
-                                   </div>
-                                  <!-- CRF transactions -->
-
-                                  <!-- debits -->
-                                  <div class="debit-transactions table-holder animated d-none">
-                                        <div class=" bg-purple text-white p-4 mb-4">
-                                                <h4 class="card-title text-capitalize text-white mx-1 mt-1">KES 1,098,740,781.00</h4>
-                                                <h6 class="card-subtitle text-white-50 mx-1 mb-1">20 CRF(s)</h6>
-                                        </div>
-                                        <div class="px-4">
-                                                <table id="#" class="table table-bordered table-striped table-hover dataTable p-4 w-100 mt-4 recon-data-table">
-                                                        <thead class="  kev-capitalize ">
-                                                            <tr class="text-capitalize text-white">
-                                                                    <th>Bank Narration</th>
-                                                                    <th>month</th>
-                                                                    <th>transaction date</th>
-                                                                    <th>Amount in KES</th>
-                                                                    <th>actions</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tfoot class="text-capitalize">
-                                                            <tr class="text-capitalize">
-                                                                <th>Bank Narration</th>
-                                                                <th>month</th>
-                                                                <th>transaction date</th>
-                                                                <th>Amount in KES</th>
-                                                                <th>actions</th>
-                                                            </tr>
-                                                        </tfoot>
-                                                        <tbody class="table-striped table-hover">
-                                                            <tr class="text-capitalize">
-                                                                <td>RTGS through Cheque SW09920081900372</td>
-                                                                <td>January</td>
-                                                                <td>1/1/2019</td>
-                                                                <td>91699354</td>
-                                                                <td>
-                                                                    <button class="btn btn-green">Reversal</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="text-capitalize">
-                                                                    <td>RTGS through Cheque SW09920081900372</td>
-                                                                    <td>January</td>
-                                                                    <td>1/1/2019</td>
-                                                                    <td>91699354</td>
-                                                                    <td>
-                                                                        <button class="btn btn-green">Reversal</button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="text-capitalize">
-                                                                        <td>RTGS through Cheque SW09920081900372</td>
-                                                                        <td>January</td>
-                                                                        <td>1/1/2019</td>
-                                                                        <td>91699354</td>
-                                                                        <td>
-                                                                            <button class="btn btn-green">Reversal</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr class="text-capitalize">
-                                                                            <td>RTGS through Cheque SW09920081900372</td>
-                                                                            <td>January</td>
-                                                                            <td>1/1/2019</td>
-                                                                            <td>91699354</td>
-                                                                            <td>
-                                                                                <button class="btn btn-green">Reversal</button>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr class="text-capitalize">
-                                                                                <td>RTGS through Cheque SW09920081900372</td>
-                                                                                <td>January</td>
-                                                                                <td>1/1/2019</td>
-                                                                                <td>91699354</td>
-                                                                                <td>
-                                                                                    <button class="btn btn-green">Reversal</button>
-                                                                                </td>
-                                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                        </div>
-                                   </div>
-                                  <!-- debits -->
-                                  </div>
-                                </div>
+        <!-- side pop ups --> 
+        
+        <!-- side pop ups --> 
+      </div>
+      
+      <!-- the table ends here --> 
+    </div>
+    <footer class="footer hidden-xs-down">
+      <p>© Revenuesure. All rights reserved.</p>
+    </footer>
+  </section>
+  
+  <!-- side pop ups --> 
+  <!-- bank pop ups -->
+  <aside class="bank-side">
+    <div class="chat__header">
+      <h2 class="chat__title"> Assign to Revenue Stream <small class="b_title">OUTWARD CHEQUE:630009 779983. bill no BA1923-100013 live LIVE AD</small> </h2>
+    </div>
+    <div class="scrollbar-inner">
+      <div class="listview listview--hover chat__buddies"> <a class="listview__item">
+        <div class="avatar-char bg-green"><i class="zmdi zmdi-money"></i></div>
+        <div class="listview__content">
+          <div class="listview__heading b_amount">KES 955,773</div>
+          <p>Transaction amount</p>
+        </div>
+        </a> <a class="listview__item">
+        <div class="avatar-char bg-green"><i class="zmdi zmdi-calendar-note"></i></div>
+        <div class="listview__content">
+          <div class="listview__heading b_date">2019-10-24 00:00:00 UTC</div>
+          <p>Date</p>
+        </div>
+        </a>
+        <form class="p-3">
+          <div class="form-group p-3 m-0">
+            <h6 class="my-2 text-capitalize">proceed with bill assignment</h6>
+            <label for="stream_id" class="text-capitalize">select a paybil</label>
+            <select name="stream_id" id="stream_id" class="custom-select form-control border text-capitalize">
+              <option value="">select one...</option>
+              <option value="1">Miscellaneous</option>
+              <option value="2">Single Business Permits</option>
+              <option value="3">Land Rates</option>
+              <option value="4">Local Authority Transfer Fund</option>
+              <option value="5">Contribution In Lieu of Rates</option>
+              <option value="6">Road Maintenance Levy Fund</option>
+              <option value="7">House and Stalls Rents</option>
+              <option value="8">Market Fees</option>
+              <option value="9">Mortuary Fees</option>
+              <option value="10">Parking Fees</option>
+              <option value="11">Educations Fees</option>
+              <option value="12">Pumwani Maternity</option>
+              <option value="13">Plans Inspection and Approvals</option>
+              <option value="14">Water and Sewerage Fees</option>
+              <option value="15">SDR</option>
+              <option value="16">Decentralisation</option>
+              <option value="17">Billboards &amp; Advertisement</option>
+              <option value="18">Dandora</option>
+              <option value="19">Umoja</option>
+              <option value="20">Rent</option>
+              <option value="21">TPS</option>
+              <option value="22">Eastlands</option>
+              <option value="23">IMPOUNDING FEE - TLB 2</option>
+              <option value="25">Unallocated</option>
+            </select>
+          </div>
+          <div class="form-group p-3 m-0">
+            <label for="bank-title" class="text-capitalize">assign reason</label>
+            <input id="bank-title" type="text" name="bank_statement_name" class="form-control border px-3" placeholder="Reason ..." aria-label="Username" aria-describedby="basic-addon1" required>
+            <button class="btn btn-green text-capitalize mt-3 ">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <!-- bank pop ups --> 
+  
+  <!-- mpesa pop ups -->
+  <aside class="mpesa-side">
+    <div class="chat__header">
+      <h2 class="chat__title"> Assign to Revenue Stream <small class="text-black m_title"><b>HGTU466233</b></small> <small>
+        <p class="m_details">Pay Bill from 254721434922 - ALPHAXARD MAINA</p>
+        </small> </h2>
+    </div>
+    <div class="scrollbar-inner">
+      <div class="listview listview--hover chat__buddies"> <a class="listview__item">
+        <div class="avatar-char bg-green"><i class="zmdi zmdi-account-o"></i></div>
+        <div class="listview__content">
+          <div class="listview__heading">MS 190690024</div>
+          <p>Account Number</p>
+        </div>
+        </a> <a class="listview__item">
+        <div class="avatar-char bg-green"><i class="zmdi zmdi-money"></i></div>
+        <div class="listview__content">
+          <div class="listview__heading m_amount">KES 955,773</div>
+          <p>Transaction amount</p>
+        </div>
+        </a> <a class="listview__item">
+        <div class="avatar-char bg-green"><i class="zmdi zmdi-calendar-note"></i></div>
+        <div class="listview__content">
+          <div class="listview__heading m_date">2019-10-24 00:00:00 UTC</div>
+          <p>Date</p>
+        </div>
+        </a>
+        <form class="p-3">
+          <div class="form-group p-3 m-0">
+            <h6 class="my-2 text-capitalize">proceed with bill assignment</h6>
+            <label for="stream_id" class="text-capitalize">select a paybil</label>
+            <select name="stream_id" id="stream_id" class="custom-select form-control border text-capitalize">
+              <option value="">select one...</option>
+              <option value="1">Miscellaneous</option>
+              <option value="2">Single Business Permits</option>
+              <option value="3">Land Rates</option>
+              <option value="4">Local Authority Transfer Fund</option>
+              <option value="5">Contribution In Lieu of Rates</option>
+              <option value="6">Road Maintenance Levy Fund</option>
+              <option value="7">House and Stalls Rents</option>
+              <option value="8">Market Fees</option>
+              <option value="9">Mortuary Fees</option>
+              <option value="10">Parking Fees</option>
+              <option value="11">Educations Fees</option>
+              <option value="12">Pumwani Maternity</option>
+              <option value="13">Plans Inspection and Approvals</option>
+              <option value="14">Water and Sewerage Fees</option>
+              <option value="15">SDR</option>
+              <option value="16">Decentralisation</option>
+              <option value="17">Billboards &amp; Advertisement</option>
+              <option value="18">Dandora</option>
+              <option value="19">Umoja</option>
+              <option value="20">Rent</option>
+              <option value="21">TPS</option>
+              <option value="22">Eastlands</option>
+              <option value="23">IMPOUNDING FEE - TLB 2</option>
+              <option value="25">Unallocated</option>
+            </select>
+          </div>
+          <div class="form-group p-3 m-0">
+            <label for="bank-title" class="text-capitalize">assign reason</label>
+            <input id="bank-title" type="text" name="bank_statement_name" class="form-control border px-3" placeholder="Reason ..." aria-label="Username" aria-describedby="basic-addon1" required>
+            <button class="btn btn-green text-capitalize mt-3 ">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <!-- mpesa pop ups -->
+  
+   <!--upload mpesa statement-->
+    <!--delete item confirmation-->
+<div class="col-12 p-5 notification-container delete-item-notification vw-100 vh-100 animated d-none">
+        <div >
+            <div class="card animated delete-row">
+                <div class="card-header bg-danger py-2 d-flex justify-content-between align-items-center align-content-center">
+                    <h2 class="card-title text-capitalize text-white m-0">Reverse Transaction?</h2>
+                    <div class="actions text-white float-right close-delete">
+                        <a href="#" class="actions__item zmdi zmdi-close text-white m-0 p-0" title="close noification"></a> 
                     </div>
-
-                    <!-- the table ends here -->
                 </div>
+                <div class="card-body">
+                    <div class="row">
+                        
+                    <div class="col-12">
+                        <img src="img/warning.svg" class=" icon float-left  mr-3">
+                        <h2 class="card-title mb-3 kev-capitalize font-weight-bold d_title onerem text-capitalize" id="record-name">Bank Naration</h2>
+                        <p>Are you sure you want to reverse this transaction<br>You cant undo this action</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-end">
+            <a class="card-link close-delete" href="#">discard</a>
+            <a class="card-link text-danger glow" href="#">reverse transaction</a>
+          </div>
+            </div>
+        </div>
+    </div>
+    <!--delete item confirmation-->
+  <!-- side pop ups --> 
+  
+</main>
 
-                
+<!-- Older IE warning message --> 
 
-                <footer class="footer hidden-xs-down">
-                    <p>© Revenuesure. All rights reserved.</p>
+<!-- Javascript --> 
+<!-- Vendors --> 
+<script src="vendors/jquery/jquery.min.js"></script> 
+<script src="vendors/popper.js/popper.min.js"></script> 
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script> 
+<script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script> 
+<script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script> 
+<script src="vendors/flot/jquery.flot.js"></script> 
+<script src="vendors/flot/jquery.flot.resize.js"></script> 
+<script src="vendors/flot.curvedlines/curvedLines.js"></script> 
+<script src="vendors/jqvmap/jquery.vmap.min.js"></script> 
+<script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script> 
+<script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script> 
+<script src="vendors/salvattore/salvattore.min.js"></script> 
+<script src="vendors/sparkline/jquery.sparkline.min.js"></script> 
+<script src="vendors/moment/moment.min.js"></script> 
+<script src="vendors/fullcalendar/fullcalendar.min.js"></script> 
 
-                   
-                </footer>
-            </section>
-        </main>
+<!-- Vendors: Data tables --> 
+<script src="vendors/datatables/jquery.dataTables.min.js"></script> 
+<script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script> 
+<script src="vendors/datatables-buttons/buttons.print.min.js"></script> 
+<script src="vendors/jszip/jszip.min.js"></script> 
+<script src="vendors/datatables-buttons/buttons.html5.min.js"></script> 
 
-        <!-- Older IE warning message -->
-           
+<!-- Charts and maps--> 
+<script src="demo/js/flot-charts/curved-line.js"></script> 
+<script src="demo/js/flot-charts/dynamic.js"></script> 
+<script src="demo/js/flot-charts/line.js"></script> 
+<script src="demo/js/flot-charts/chart-tooltips.js"></script> 
+<script src="demo/js/other-charts.js"></script> 
+<script src="demo/js/jqvmap.js"></script> 
 
-        <!-- Javascript -->
-        <!-- Vendors -->
-        <script src="vendors/jquery/jquery.min.js"></script>
-        <script src="vendors/popper.js/popper.min.js"></script>
-        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
-
-        <script src="vendors/flot/jquery.flot.js"></script>
-        <script src="vendors/flot/jquery.flot.resize.js"></script>
-        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
-        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
-        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
-        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
-        <script src="vendors/salvattore/salvattore.min.js"></script>
-        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
-        <script src="vendors/moment/moment.min.js"></script>
-        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
-
-        <!-- Vendors: Data tables -->
-        <script src="vendors/datatables/jquery.dataTables.min.js"></script>
-        <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
-        <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
-        <script src="vendors/jszip/jszip.min.js"></script>
-        <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
-
-
-        <!-- Charts and maps-->
-        <script src="demo/js/flot-charts/curved-line.js"></script>
-        <script src="demo/js/flot-charts/dynamic.js"></script>
-        <script src="demo/js/flot-charts/line.js"></script>
-        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
-        <script src="demo/js/other-charts.js"></script>
-        <script src="demo/js/jqvmap.js"></script>
-
-        <!-- App functions and actions -->
-        <script src="js/app.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
-
-
+<!-- App functions and actions --> 
+<script src="js/app.min.js"></script> 
+<script src="js/main.js"></script>
+</body>
 </html>

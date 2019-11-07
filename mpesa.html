@@ -52,8 +52,8 @@
                         </div>
 
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">View Profile</a>
-                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="profile.html">View Profile</a>
+                            <a class="dropdown-item" href="settings.html">Settings</a>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
                     </div>
@@ -81,10 +81,34 @@
 
             <section class="content">
                 <header class="content__title">
-                    <h1>Dashboard</h1>
-                    <small>Welcome to the revenuesure roconmet dashboard</small>
+                    <h1 class="text-capitalize">M-Pesa records</h1>
+                    <small>Data on M-Pesa transactions data</small>
                    
                 </header>
+
+                <div class="row quick-stats text-uppercase">
+                        <a href="#top" class="col-sm-12 col-md-6 col-lg-4 card-link">
+                            <div class="quick-stats__item bg-green">
+                                <div class="quick-stats__info">
+                                    <div class="d-flex quick-stats__info">
+                                            <h2 class="pr-3 border-right"><small>Paid </small><br>KES 38,236,448.00</h2>
+                                            <h2 class="pl-3"><small>Withdrawn </small><br>KES 38,236,448.00</h2>
+                                    </div>
+                                    <small class="text-capitalize">payBills</small>
+                                </div>
+                            </div>
+                        </a>
+    
+                        <a href="#bottom" class="col-sm-12 col-md-5 col-lg-4 card-link">
+                            <div class="quick-stats__item bg-amber">
+                                <div class="quick-stats__info">
+                                        <h2 class="mb-3"><small>Swiped To Bank</small><br>KES 330,543,850.00</h2>
+                                        <small class="text-capitalize">Total Swept</small>
+                                </div>
+                            </div>
+                        </a>    
+                        
+                    </div>
                
                 <div class="row">
                     <!-- quick navigation button -->

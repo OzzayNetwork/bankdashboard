@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
         <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
         <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="demo/chart-s-js/chartist.min.css">
 
         <!-- App styles -->
         <link rel="stylesheet" href="css/app.min.css">
@@ -401,7 +402,7 @@
 
                 <div class="row quick-stats text-uppercase">
                     <div class="col-sm-6 col-md-3">
-                        <div class="quick-stats__item bg-blue">
+                        <div class="quick-stats__item bg-green">
                             <div class="quick-stats__info">
                                 <h2>987,459</h2>
                                 <small class="text-capitalize">Year to date (YTD)</small>
@@ -410,7 +411,7 @@
                     </div>
 
                     <div class="col-sm-6 col-md-3">
-                        <div class="quick-stats__item bg-amber">
+                        <div class="quick-stats__item bg-light-green">
                             <div class="quick-stats__info">
                                 <h2>356,785K</h2>
                                 <small class="text-capitalize">month to date (MTD)</small>
@@ -419,7 +420,7 @@
                     </div>
 
                     <div class="col-sm-6 col-md-3">
-                        <div class="quick-stats__item bg-purple">
+                        <div class="quick-stats__item bg-green">
                             <div class="quick-stats__info">
                                 <h2>$58,778</h2>
                                 <small class="text-capitalize">week to date (WTD)</small>
@@ -428,10 +429,36 @@
                     </div>
 
                     <div class="col-sm-6 col-md-3">
-                        <div class="quick-stats__item bg-red">
+                        <div class="quick-stats__item bg-light-green">
                             <div class="quick-stats__info">
                                 <h2>214</h2>
                                 <small class="capitalize">yesterday</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="row text-capitalize">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">collection by month</h4>
+                                <h6 class="card-subtitle">collections by month for the year <span class="this-year">year</span></h6>
+
+                                <div class="flot-chart flot-curved-line"></div>
+                                <div class="flot-chart-legends flot-chart-legends--curved"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">collections this week</h4>
+                                <h6 class="card-subtitle">collections for the week<span class="this-week"></span></h6>
+
+                                <div class="flot-chart flot-bar"></div>
+                                <div class="flot-chart-legends flot-chart-legends--line"></div>
                             </div>
                         </div>
                     </div>
@@ -589,6 +616,7 @@
         <script src="demo/js/flot-charts/curved-line.js"></script>
         <script src="demo/js/flot-charts/dynamic.js"></script>
         <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/week.js"></script>
         <script src="demo/js/flot-charts/chart-tooltips.js"></script>
         <script src="demo/js/other-charts.js"></script>
         <script src="demo/js/jqvmap.js"></script>
